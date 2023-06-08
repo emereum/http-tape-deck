@@ -1,11 +1,12 @@
 import re
 import hashlib
 import base64
+import time
 
 class Deterministic:
     def load(self, loader):
         with open('deterministic.js', 'r') as file:
-            self.js = file.read()
+            self.js = file.read().replace('{{WPR_TIME_SEED_TIMESTAMP}}', str(int(time.time()*1000)))
             sha256 = hashlib.sha256()
             sha256.update(self.js.encode('utf-8'))
             self.js_csp = '; script-src \'sha256-' + base64.b64encode(sha256.digest()).decode('utf-8') + '\''

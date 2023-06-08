@@ -28,19 +28,18 @@
   }
 })();
 
-/*
 (function () {
   var date_count = 0;
   var date_count_threshold = 25;
   var orig_date = Date;
-  // Time since epoch in milliseconds. This is replaced by script injector with
-  // the date when the recording is done.
+  // Time since epoch in milliseconds. This is replaced by deterministic.py
+  // when recording begins
   var time_seed = {{WPR_TIME_SEED_TIMESTAMP}};
   Date = function() {
     if (this instanceof Date) {
       date_count++;
       if (date_count > date_count_threshold){
-        time_seed += 50;
+        // time_seed += 50; // uncomment to allow slow time progression
         date_count = 1;
       }
       switch (arguments.length) {
@@ -70,4 +69,3 @@
     return 480;
   };
 })();
-*/
