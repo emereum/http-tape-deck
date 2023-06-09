@@ -34,7 +34,7 @@
   var orig_date = Date;
   // Time since epoch in milliseconds. This is replaced by deterministic.py
   // when recording begins
-  var time_seed = {{WPR_TIME_SEED_TIMESTAMP}};
+  var time_seed = `WPR_TIME_SEED_TIMESTAMP`;
   Date = function() {
     if (this instanceof Date) {
       date_count++;
