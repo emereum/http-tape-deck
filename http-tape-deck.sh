@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 THIS_DIR=$(cd -P "$(dirname "$(readlink -f "${BASH_SOURCE[0]}" || echo "${BASH_SOURCE[0]}")")" && pwd)
-echo "$THIS_DIR"
 
 if [[ $# != 2 ]] || [[ $1 != "play" && $1 != "record" ]]; then
     echo "Usage: http-tape-deck (play|record) tape-name"
