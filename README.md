@@ -1,5 +1,3 @@
-![http-tape-deck](tape_deck.png)
-
 <p align="center">
     <img src="https://raw.githubusercontent.com/emereum/http-tape-deck/main/tape_deck.png"/><br />
     <kbd>brew install emereum/tap/http-tape-deck</kbd>
