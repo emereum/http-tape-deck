@@ -10,7 +10,7 @@
   var random_seed = 0.462;
   Math.random = function() {
     random_count++;
-    if (random_count > random_count_threshold){
+    if (random_count > random_count_threshold) {
      random_seed += 0.1;
      random_count = 1;
     }
@@ -38,7 +38,7 @@
   Date = function() {
     if (this instanceof Date) {
       date_count++;
-      if (date_count > date_count_threshold){
+      if (date_count > date_count_threshold) {
         // time_seed += 50; // uncomment to allow slow time progression
         date_count = 1;
       }

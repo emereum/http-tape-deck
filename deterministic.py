@@ -20,14 +20,14 @@ class Deterministic:
             return
         if not response.content:
             return
-        if 'text/html' not in response.headers['content-type']:
+        if 'text/html' not in response.headers.get('content-type'):
             return
         if b'<head' not in response.content:
             return
         
         headers = flow.response.headers
         for csp_header in ['content-security-policy', 'content-security-policy-report-only']:
-            if csp_header not in headers:
+            if not headers.get(csp_header):
                 continue
             headers[csp_header] = re.sub(
                 '(;\s*)?script-src|$',
