@@ -33,6 +33,7 @@ The key to making a reusable recording is to start recording and playback with a
 * Clearing your browser cache (or suspending it via `devtools > Network > Disable cache`)
 * Using a new incognito tab (or otherwise deleting all local data via `devtools > Application > Storage > Clear site data`)
 * Ensuring the page is always opened in the same window dimensions (or if you intend to play back in both desktop and mobile layouts, make sure you recorded in both those layouts, too.)
+* Ensuring that if devtools was open during recording, that it's also open during playback.
 
 ### Recording `localhost`
 
