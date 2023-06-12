@@ -1,5 +1,10 @@
 ![http-tape-deck](tape_deck.png)
 
+<p align="center">
+    <img src="https://raw.githubusercontent.com/emereum/http-tape-deck/main/tape_deck.png"/><br />
+    <kbd>brew install emereum/tap/http-tape-deck</kbd>
+</p>
+
 # http-tape-deck
 ![brew-test-bot](https://github.com/emereum/homebrew-tap/actions/workflows/tests.yml/badge.svg)
 
