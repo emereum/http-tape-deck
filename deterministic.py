@@ -29,12 +29,16 @@ class Deterministic:
         for csp_header in ['content-security-policy', 'content-security-policy-report-only']:
             if not headers.get(csp_header):
                 continue
-            headers[csp_header] = re.sub(
-                '(;\s*)?script-src|$',
-                self.js_csp,
-                headers[csp_header],
-                1
-            )
+            del headers[csp_header]
+            # This breaks if a server responds with two CSP headers. We overwrite all but the last one.
+            # and for that reason, CSP headers are out.
+            # headers['X-Original-' + csp_header] = headers[csp_header]
+            # headers[csp_header] = re.sub(
+            #     '(;\s*)?(script-src|$)',
+            #     self.js_csp,
+            #     headers[csp_header],
+            #     1
+            # )
         
         script = '<script type="text/javascript">' + self.js + '</script>'
         response.content = re.sub(
