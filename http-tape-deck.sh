@@ -13,6 +13,6 @@ if [[ $1 == "record" ]]; then
 fi
 
 if [[ $1 == "play" ]]; then
-    mitmdump -S "$2.tape" --set server_replay_ignore_content=true --set server_replay_nopop=true --set server_replay_kill_extra=true "${@:3}"
+    mitmdump -S "$2.tape" --set server_replay_ignore_content=true --set server_replay_reuse=true --set server_replay_kill_extra=true "${@:3}"
     exit 0
 fi
