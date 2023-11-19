@@ -58,3 +58,8 @@ When `http-tape-deck` is recording, it will start an https proxy on `https://loc
 
 A proxy-switching extension like [Proxy Switcher](https://chrome.google.com/webstore/detail/proxy-switcher-and-manage/onnfghpihccifgojkpnnncpagjcdbjod) makes switching between record/playback and normal browsing easier.
 
+## Similar Tools
+
+* [airtasker/proxay](https://github.com/airtasker/proxay)
+* [flickr/yakbak](https://github.com/flickr/yakbak)
+* [mock-server/mockserver](https://github.com/mock-server/mockserver)
